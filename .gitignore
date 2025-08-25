@@ -1,0 +1,8 @@
+# macOS & editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+dist/
+*.zip
