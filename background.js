@@ -2,7 +2,7 @@
 chrome.runtime.onInstalled.addListener(async () => {
   const defaults = {
     holdSeconds: 20,        // how long to hold the button
-    cooldownMinutes: 30,    // how long IG stays unlocked after success
+    cooldownMinutes: 5,    // how long IG stays unlocked after success
   };
   const current = await chrome.storage.local.get(Object.keys(defaults));
   const newValues = {};

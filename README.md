@@ -5,7 +5,7 @@ A tiny nudge that locks Instagram behind a short puzzle. Press-and-hold for N se
 ## Features
 - Full-screen overlay on instagram.com until you complete the puzzle
 - Press-and-hold challenge (default 20s)
-- Cooldown (default 30 min)
+- Cooldown (default 5 min)
 - Options page to tweak difficulty
 - Popup to see status or lock immediately
 

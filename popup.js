@@ -9,7 +9,7 @@ function minsLeft(untilMs) {
 }
 
 async function refreshStatus() {
-  const { unlockedUntil = 0, cooldownMinutes = 30 } = await chrome.storage.local.get(["unlockedUntil", "cooldownMinutes"]);
+  const { unlockedUntil = 0, cooldownMinutes = 5 } = await chrome.storage.local.get(["unlockedUntil", "cooldownMinutes"]);
   if (Date.now() < unlockedUntil) {
     statusEl.textContent = `Unlocked: ~${minsLeft(unlockedUntil)} min remaining (cooldown: ${cooldownMinutes}m).`;
   } else {

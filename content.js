@@ -2,7 +2,7 @@
   const now = () => Date.now();
 
   const {
-    cooldownMinutes = 30,
+    cooldownMinutes = 5,
     holdSeconds = 20,
     unlockedUntil = 0
   } = await chrome.storage.local.get(["cooldownMinutes", "holdSeconds", "unlockedUntil"]);
