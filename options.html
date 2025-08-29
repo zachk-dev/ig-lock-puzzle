@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>IG Lock Puzzle – Options</title>
+  <style>
+    body { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial; margin: 24px; max-width: 720px; }
+    h1 { margin-top: 0; }
+    label { display: block; margin: 14px 0 6px; font-weight: 600; }
+    input { padding: 8px; border-radius: 8px; border: 1px solid #ddd; width: 120px; }
+    .row { margin: 12px 0; }
+    .save { margin-top: 18px; padding: 10px 14px; border-radius: 10px; border: 1px solid #ddd; background: #fafafa; cursor: pointer; }
+    .muted { color: #555; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <h1>IG Lock Puzzle – Options</h1>
+  <p class="muted">Tune how hard it is to unlock Instagram.</p>
+
+  <div class="row">
+    <label for="holdSeconds">Hold duration (seconds)</label>
+    <input id="holdSeconds" type="number" min="5" max="180" step="1" />
+  </div>
+
+  <div class="row">
+    <label for="cooldownMinutes">Cooldown after success (minutes)</label>
+    <input id="cooldownMinutes" type="number" min="1" max="360" step="1" />
+  </div>
+
+  <button class="save" id="saveBtn">Save</button>
+  <span id="saved" class="muted" style="margin-left:8px;"></span>
+
+  <script src="options.js"></script>
+</body>
+</html>
