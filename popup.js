@@ -1,4 +1,4 @@
-// popup.js
+// popup.js (minimal)
 const statusEl = document.getElementById("status");
 const lockNowBtn = document.getElementById("lockNow");
 const openOptionsBtn = document.getElementById("openOptions");
@@ -9,7 +9,8 @@ function minsLeft(untilMs) {
 }
 
 async function refreshStatus() {
-  const { unlockedUntil = 0, cooldownMinutes = 5 } = await chrome.storage.local.get(["unlockedUntil", "cooldownMinutes"]);
+  const { unlockedUntil = 0, cooldownMinutes = 5 } =
+    await chrome.storage.local.get(["unlockedUntil", "cooldownMinutes"]);
   if (Date.now() < unlockedUntil) {
     statusEl.textContent = `Unlocked: ~${minsLeft(unlockedUntil)} min remaining (cooldown: ${cooldownMinutes}m).`;
   } else {
@@ -19,16 +20,10 @@ async function refreshStatus() {
 
 lockNowBtn.addEventListener("click", async () => {
   await chrome.storage.local.set({ unlockedUntil: 0 });
-  // Tell active IG tabs to re-lock
-  const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-  if (tab?.id) {
-    chrome.tabs.sendMessage(tab.id, { forceLock: true }).catch(() => {});
-  }
+  // No tabs permission needed; content.js listens to storage changes and relocks itself
   refreshStatus();
 });
 
-openOptionsBtn.addEventListener("click", () => {
-  chrome.runtime.openOptionsPage();
-});
+openOptionsBtn.addEventListener("click", () => chrome.runtime.openOptionsPage());
 
 refreshStatus();

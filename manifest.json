@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "IG Lock Puzzle",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Gate Instagram behind a focus puzzle to curb impulse scrolling.",
   "action": {
     "default_title": "IG Lock Puzzle",
@@ -11,7 +11,7 @@
   "background": {
     "service_worker": "background.js"
   },
-  "permissions": ["storage", "scripting", "tabs"],
+  "permissions": ["storage"],
   "host_permissions": [
     "https://www.instagram.com/*",
     "https://instagram.com/*"
