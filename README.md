@@ -1,5 +1,7 @@
 # IG Lock Puzzle (Chrome Extension)
 
+## Available on Chrome Web Store: https://chromewebstore.google.com/detail/nmoakakjpjoebfkbegjalcfpfoebkgog?utm_source=item-share-cb
+
 A tiny nudge that locks Instagram behind a short puzzle. Press-and-hold for N seconds to unlock, then you get a cooldown window to use IG intentionally.
 
 ## Features
