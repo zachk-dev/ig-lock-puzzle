@@ -11,6 +11,11 @@ A tiny nudge that locks Instagram behind a short puzzle. Press-and-hold for N se
 - Options page to tweak difficulty
 - Popup to see status or lock immediately
 
+## Planned features
+- Different types of puzzles
+- Monetized puzzles
+- Reroutes to custom pages
+
 ## Install (Developer Mode)
 1. Clone or download this repo.
 2. Open Chrome → `chrome://extensions/`.
